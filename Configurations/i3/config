@@ -5,7 +5,10 @@
 ### Variables for settings (This makes changing them WAY easyer!) ###
 set $mod                             Mod4
 set $smod                            Shift
-set $font                            pango:Source Sans Pro, Semibold 11
+set $wm_setting_font                 pango:Source Sans Pro, Semibold 11
+set $wm_setting_gap_width            15
+set $wm_setting_gap_heigth           15
+set $wm_setting_border_size          2
 set $wm_setting_key_left             Left
 set $wm_setting_key_down             Down
 set $wm_setting_key_up               Up
@@ -42,12 +45,6 @@ set $bar_color_workspace_inactive_bg #BF616A
 set $bar_color_workspace_inactive_fg #2E3440
 set $bar_color_workspace_urgent_bg   #D08770
 set $bar_color_workspace_urgent_fg   #2E3440
-
-# Set the font for titlebar (which are hidden here)
-font $font
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
 
 ### Applications ###
 # Start a terminal emulator
@@ -141,13 +138,13 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### Gaps ###
-gaps hotizontal 15
-gaps vertical 15
+gaps hotizontal $wm_setting_gap_width
+gaps vertical   $wm_setting_gap_heigth
 smart_gaps on
 
 ### Borders ###
-default_border border pixel 2
-default_floading_border border pixel 2
+default_border border pixel $wm_setting_border_size
+default_floading_border border pixel $wm_setting_border_size
 smart_borders on
 
 ### Colors ###
@@ -181,6 +178,12 @@ bar {
 }
 
 ### Miscellaneous settings ###
+# Set the font for titlebar (which are hidden here)
+font $wm_setting_font
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
 # Enter fullscreen mode for the focused window
 bindsym $mod+f fullscreen toggle
 
