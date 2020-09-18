@@ -178,7 +178,7 @@ bar {
 }
 
 ### Miscellaneous settings ###
-# Set the font for titlebar (which are hidden here)
+# Set the font used for titlebars (which are hidden here)
 font $wm_setting_font
 
 # Use Mouse+$mod to drag floating windows to their wanted position
