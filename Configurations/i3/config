@@ -1,4 +1,4 @@
-# SkyyySi's Noric i3 config file
+# SkyyySi's Nordic i3 config file
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
@@ -178,7 +178,7 @@ bar {
 }
 
 ### Miscellaneous settings ###
-# Set the font for titlebar (which are hidden here)
+# Set the font used for titlebars (which are hidden here)
 font $wm_setting_font
 
 # Use Mouse+$mod to drag floating windows to their wanted position
